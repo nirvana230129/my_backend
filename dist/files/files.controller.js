@@ -23,7 +23,7 @@ let FilesController = class FilesController {
         this.pythonService = pythonService;
     }
     handleUpload(file) {
-        const scriptPath = './src/python/main.py';
+        const scriptPath = './src/files/python/main.py';
         const filePath = './sounds/' + file.filename;
         return this.pythonService.goPy(scriptPath, filePath);
     }

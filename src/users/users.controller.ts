@@ -1,6 +1,7 @@
-import {Body, Post, Get, Controller, Delete, Param} from '@nestjs/common';
+import { Body, Post, Get, Controller, Delete, Param, UseGuards } from "@nestjs/common";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { UsersService } from "./users.service";
+import { IsLoggedInGuard } from "../guards/is-logged-in.guard";
 
 @Controller('users')
 export class UsersController {
@@ -12,6 +13,7 @@ export class UsersController {
         return this.usersService.createUser(userDto)
     }
 
+    @UseGuards(IsLoggedInGuard)
     @Get()
     getAll(){
         return this.usersService.getAllUsers()

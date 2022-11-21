@@ -13,7 +13,7 @@ let FilesService = class FilesService {
     goPy(scriptPath, filePath) {
         const pythonShell = new python_shell_1.PythonShell(scriptPath, {
             mode: 'text',
-            pythonPath: 'src/python/environment/bin/python'
+            pythonPath: 'src/files/python/environment/bin/python'
         });
         return new Promise(function (resolve) {
             pythonShell.send(filePath);

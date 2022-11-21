@@ -9,7 +9,7 @@ export class FilesService {
             scriptPath,
             {
                 mode: 'text',
-                pythonPath: 'src/python/environment/bin/python'
+                pythonPath: 'src/files/python/environment/bin/python'
             }
         )
         return new Promise(function (resolve) {

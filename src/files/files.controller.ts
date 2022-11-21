@@ -1,4 +1,4 @@
-import {Controller, Get, Post, UploadedFile, UseInterceptors} from "@nestjs/common";
+import {Controller, Post, UploadedFile, UseInterceptors} from "@nestjs/common";
 import { FilesService } from "./files.service";
 import {FileInterceptor} from "@nestjs/platform-express";
 import {diskStorage} from "multer";
@@ -25,7 +25,7 @@ export class FilesController {
             })
         }))
     handleUpload(@UploadedFile() file: Express.Multer.File) {
-        const scriptPath = './src/python/main.py'
+        const scriptPath = './src/files/python/main.py'
         const filePath = './sounds/' + file.filename
         return this.pythonService.goPy(scriptPath, filePath)
     }
