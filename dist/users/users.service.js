@@ -26,7 +26,7 @@ let UsersService = class UsersService {
         user.email = dto.email;
         user.password = dto.password;
         if (dto.email == "admin@mail")
-            user.isAdmin = true;
+            user.role = 'admin';
         return await this.usersRepository.save(user);
     }
     async getAllUsers() {

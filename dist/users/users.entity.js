@@ -26,17 +26,9 @@ __decorate([
     __metadata("design:type", String)
 ], User.prototype, "password", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: "bool", default: false }),
-    __metadata("design:type", Boolean)
-], User.prototype, "isAdmin", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'text', default: '' }),
+    (0, typeorm_1.Column)({ type: "text", default: 'user' }),
     __metadata("design:type", String)
-], User.prototype, "filename", void 0);
-__decorate([
-    (0, typeorm_1.Column)({ type: 'bytea', default: '' }),
-    __metadata("design:type", Uint8Array)
-], User.prototype, "data", void 0);
+], User.prototype, "role", void 0);
 User = __decorate([
     (0, typeorm_1.Entity)()
 ], User);

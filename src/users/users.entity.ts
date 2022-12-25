@@ -12,12 +12,13 @@ export class User{
     @Column({type: "text", nullable: false})
     password: string;
 
-    @Column({type: "bool", default: false})
-    isAdmin: boolean;
-
+    @Column({type: "text", default: 'user'})
+    role: string;
+    /*
     @Column({type: 'text', default: ''})
     filename: string;
 
     @Column({type: 'bytea', default: ''})
     data: Uint8Array;
+    */
 }
